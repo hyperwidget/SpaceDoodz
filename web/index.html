@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="utf-8">
+    <title>Space DOODz!</title>
+
+    <script src="packages/web_components/platform.js"></script>
+    <script src="packages/web_components/dart_support.js"></script>
+    <link rel="stylesheet" href="../vendor/foundation/css/foundation.css">
+    <link rel="stylesheet" href="../vendor/foundation/css/foundation.css.map">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body root>
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+        <li class="name">
+            <a class="title">D.O.O.D.Z.</a>
+        </li>
+    </ul>
+
+    <section class="top-bar-section">
+        <ul class="left">
+            <li>
+                <a>Decompilable Object Oriented D.O.O.D.Z</a>
+            </li>
+        </ul>
+    </section>
+</nav>
+
+<div class="row fullWidth">
+    <div class="large-3 columns">
+        <p class="text-center">
+            Doodz: {{total | doodzFilter}}
+        </p>
+
+        <div class="clickArea clickable canBuild" ng-click="ctrl.build()">
+            Build Doodz
+        </div>
+    </div>
+
+    <div class="large-3 columns">
+        Doodz per click: {{ctrl.clickValue}} <br/>
+        Click Multiplier: {{ctrl.multiplier}} <br/>
+        Auto Value: {{auto}}
+        <br/>
+
+        <!--<br/>-->
+        <!--AutoDoodz: {{ctrl.autoValue}} <br/>-->
+        <!--AutoMultiplier: {{autoMultiplier}} <br/>-->
+        <!--<br/>-->
+
+        <!--Addition Value: {{autoDoodz}}-->
+    </div>
+
+    <div class="large-6 columns">
+        <section builder>
+            <div class="large-12 columns" ng-if="builder.show">
+                <div id="buildBuilder" ng-click="builder.build()" ng-class="{'canBuild' : builder.canBuild}"
+                     class="clickArea" ng-mouseover="builder.showInfo()">
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <span class="label">
+                                B
+                            </span>
+                        </div>
+                        <div class="large-5 columns">
+                        </div>
+                        <div class="large-3 columns">
+                            <span class="label right">
+                            {{builder.count}}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <span class="left">
+                                {{builder.cost}} doodz
+                            </span>
+                            <span class="right">
+                                {{builder.value}} DPS
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info panel callout">
+                        {{builder.count}} builders at {{builder.value}} DPS <br/>
+                        Contributing {{builder.autoValue}} DPS total<br/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!--<div class="clickArea">-->
+    <!--<!--{{action 'addClickDoodz'}}>-->
+    <!--Improve Click-->
+    <!--<div class="toolTip">-->
+    <!--<!--Build Cost: {{builderCost}}-->
+    <!--<!--Builder Value: {{builderValue}} DPS-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="clickArea">-->
+    <!--<!--{{action 'addClickMultiplier'}}>-->
+    <!--Improve Click Multiplier-->
+    <!--</div>-->
+    <!--<br/>-->
+    <!--<br/>-->
+    <!--<br/>-->
+
+    <!--<div class="clickArea">-->
+    <!--<!--{{action 'addAutoMultiplier'}}>-->
+    <!--Improve Auto Multiplier-->
+    <!--</div>-->
+    <!--<br/>-->
+    <!--<br/>-->
+    <!--<br/>-->
+</div>
+</div>
+
+<script src="../vendor/jquery/dist/jquery.min.js"></script>
+<script src="../vendor/foundation/js/foundation.min.js"></script>
+
+<script type="application/dart" src="main.dart"></script>
+<script type="text/javascript" src="packages/browser/dart.js"></script>
+</body>
+</html>

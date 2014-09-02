@@ -1,0 +1,21 @@
+{
+    "name": "Space Doodz",
+    "version": "0.01",
+    "homepage": "https://github.com/rawkamatic/spaceDoodz",
+    "authors": [
+        "Hunter Jansen <rawkamatic@gmail.com>"
+    ],
+    "description": "A Cookie Clicker inspired game using angular and dart",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "foundation": "latest",
+        "gulp": "latest"
+    }
+}
